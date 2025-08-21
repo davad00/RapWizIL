@@ -1,0 +1,24 @@
+{
+  "name": "rapwizil",
+  "version": "1.0.0",
+  "description": "Hebrew Rap Visualization Tool",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm start",
+    "dev:backend": "python run_backend.py || py run_backend.py",
+    "install:all": "npm install && cd frontend && npm install && cd .. && (python install_backend.py || py install_backend.py)",
+    "install:backend": "python install_backend.py || py install_backend.py",
+    "install:manual": "python install_manual.py || py install_manual.py",
+    "build": "cd frontend && npm run build",
+    "start:backend": "cd backend && python app.py",
+    "start:backend-py": "cd backend && py app.py",
+    "test": "python test_installation.py || py test_installation.py"
+  },
+  "keywords": ["hebrew", "rap", "nlp", "visualization", "rhyme"],
+  "author": "RapWizIL",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
